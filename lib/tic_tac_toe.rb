@@ -129,4 +129,9 @@ def full?(board)
     turn(board)
   end
 
-  if
+  if winner(board)
+    puts "Congratulations #{{winner}}!!"
+  else if draw?(board)
+    puts "It was a draw."
+  end
+end
