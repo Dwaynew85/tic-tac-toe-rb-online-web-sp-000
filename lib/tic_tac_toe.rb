@@ -111,7 +111,7 @@ def full?(board)
     end
   end
 
-  def winner (board)
+  def winner(board)
     index = []
     index = won?(board)
     if index == false
@@ -128,3 +128,5 @@ def full?(board)
   until over?(board)
     turn(board)
   end
+
+  if 
