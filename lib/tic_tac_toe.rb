@@ -36,5 +36,5 @@ def valid_move?(board, index)
 end
 
 def turn_count(board)
-  puts "Enter number between 1-9"
+  puts "Please enter 1-9"
 end
