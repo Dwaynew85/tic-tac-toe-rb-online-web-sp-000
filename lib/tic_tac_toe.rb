@@ -124,3 +124,8 @@ def full?(board)
       end
     end
   end
+
+  until over?(board)
+    turn(board)
+  end
+  
