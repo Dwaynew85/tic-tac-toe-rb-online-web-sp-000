@@ -125,13 +125,14 @@ def full?(board)
     end
   end
 
-  until over?(board)
-    turn(board)
+  def play(board)
+    until over?(board) == true
+      turn(board)
+    end
+  
+    if won?(board)
+      puts "Congratulations #{winner(board)}!"
+    elsif draw?(board)
+      puts "Cats Game!"
+    end
   end
-
-  if winner(board)
-    puts "Congratulations #{{winner}}!!"
-  else if draw?(board)
-    puts "It was a draw."
-  end
-end
