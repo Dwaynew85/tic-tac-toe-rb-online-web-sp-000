@@ -27,12 +27,8 @@ def move(board, index, current_player)
   board[index] = current_player
 end
 
-def position_taken?(array, ind)
-  if array[ind] == " " || array[ind] == "" || array[ind] == nil
-    return false
-  else
-    return true
-  end
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
 end
 
 def valid_move?(board, index)
