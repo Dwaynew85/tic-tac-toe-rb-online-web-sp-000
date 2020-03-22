@@ -1,12 +1,12 @@
 WIN_COMBINATIONS = [
-[0,1,2],
-[3,4,5],
-[6,7,8],
-[0,3,6],
-[1,4,7],
-[2,5,8],
-[0,4,8],
-[2,4,6]
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [6, 4, 2]
 ]
 
 def display_board(board)
@@ -18,9 +18,7 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
-  index = user_input.to_i
-  index -= 1
-  return index
+  user_input.to_i - 1
 end
 
 def move(board, index, current_player)
@@ -46,6 +44,7 @@ def turn_count(board)
 end
 
 def current_player(board)
+  #if the turn count is an even number, that means O just went, so the next/current player is X
   num_turns = turn_count(board)
   if num_turns % 2 == 0
     player = "X"
