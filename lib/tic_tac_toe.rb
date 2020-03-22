@@ -128,4 +128,3 @@ def full?(board)
   until over?(board)
     turn(board)
   end
-  
