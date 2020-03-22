@@ -129,4 +129,4 @@ def full?(board)
     turn(board)
   end
 
-  if 
+  if
