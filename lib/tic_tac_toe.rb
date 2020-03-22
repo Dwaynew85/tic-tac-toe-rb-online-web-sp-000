@@ -34,3 +34,7 @@ end
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
+
+def turn_count(board)
+  puts "Enter number between 1-9"
+  
