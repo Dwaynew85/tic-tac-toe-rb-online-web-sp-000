@@ -35,14 +35,23 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def turn (board)
-  puts "Please enter 1-9:"
-  num = gets.chomp
-  index = input_to_index(num)
-  if valid_move?(board, index) == true
-    move(board, index, current_player)
-    display_board(board)
-  else
-    turn(board)
+def turn_count(board)
+  turn = 0
+  board.each do |index|
+    if index == "X" || index == "O"
+      turn += 1
+    end
   end
+  return turn
+end
+
+def current_player(board)
+  #if the turn count is an even number, that means O just went, so the next/current player is X
+  num_turns = turn_count(board)
+  if num_turns % 2 == 0
+    player = "X"
+  else
+    player = "O"
+  end
+  return player
 end
