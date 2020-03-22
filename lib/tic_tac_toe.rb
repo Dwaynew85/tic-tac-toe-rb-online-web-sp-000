@@ -84,3 +84,13 @@ def won?(board)
   }
   return false
 end
+
+def full?(board)
+  board.all? do |full_board|
+    if full_board.include?("X") || full_board.include?("O")
+      true
+      else
+        false
+      end
+    end
+  end
